@@ -1,20 +1,123 @@
-header{
+/* .home */
 
+header {
+    display: flex;
     height: 100vh;
     padding-top: 7rem;
     overflow: hidden;
+    padding: 20px 7%;
 }
 
-.header__container{
+.header__container {
     margin-top: 20vh !important;
     text-align: center;
     /* height: 100%; */
     position: relative;
 }
 
+
+/* For image*/
+.home__image {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: solid 10px #ed2279;
+    border-radius: 50%;
+    box-shadow: 0px 30px 30px #ed2279; */
+    /* box-shadow: #ed2279; */
+    overflow: hidden;
+}
+
+.home__image>img {
+    height: 50%;
+
+    border: solid 10px #ed2279;
+    border-radius: 50%;
+    box-shadow: 2px 15px 30px #ed2279;
+
+    animation: animate 2.5s ease-in-out forwards infinite;
+}
+.home__image>img:hover{
+    box-shadow: 10px 15px 40px #ed2279;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.socials__header {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.socials__header>div {
+    padding: 3px 2px 0px 2px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #ed2279;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.socials__header_a{
+    transition: margin-top 0.25s ease;
+}
+
+.socials__header_a:hover {
+    border: 1px solid white;
+    background-color: rgba(255,255,255,0.5);
+    margin-top: -15px;
+}
+
+.container p b{
+    color:#ed2279;
+    position: relative;
+}
+.container p b:after{
+    content: "";
+    position:absolute;
+    left: 0;
+    right: 0px;
+    height: 100%;
+    border-left: 4px solid #ed2279;
+    background-color: rgb(21, 21, 21);
+    animation: text 3s infinite backwards steps(10);
+}
+@keyframes text {
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+/****/
+
+
 /* Applying CSS for CTA */
 
-.cta{
+.cta {
 
     margin-top: 5.5rem;
     display: flex;
@@ -24,7 +127,7 @@ header{
 
 /* Applying CSS for HeaderSocials */
 
-.header__socials{
+.header__socials {
 
     display: flex;
     flex-direction: column;
@@ -35,7 +138,7 @@ header{
     /* bottom: 3rem; */
 }
 
-.header__socials::after{
+.header__socials::after {
 
     content: "";
     width: 1px;
@@ -45,7 +148,7 @@ header{
 
 /* Applying CSS for My image */
 
-.me{
+.me {
 
     background: linear-gradient(var(--color-primary), transparent);
     width: 22rem;
@@ -55,17 +158,17 @@ header{
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
     overflow: hidden;
-    padding: 5rem 1.5rem 1,5rem 1.5rem;
+    padding: 5rem 1.5rem 1, 5rem 1.5rem;
 }
 
-.me > img{
+.me>img {
 
     margin-left: .5rem;
 }
 
 /* Applying CSS for Scroll Down */
 
-.scroll__down{
+.scroll__down {
 
     position: absolute;
     right: -2.3rem;
@@ -79,9 +182,15 @@ header{
 
 @media screen and (max-width: 1024px) {
 
-    header{
+    header {
 
         height: 60vh;
+        flex-direction: column-reverse;
+    }
+
+    .home__image {
+        width: 100%;
+        height: 120% !important;
     }
 
 }
@@ -90,18 +199,26 @@ header{
 
 @media screen and (max-width: 600px) {
 
-    header{
+    header {
 
         height: 100vh;
     }
 
-    .header__socials, .scroll__down{
+    .header__socials,
+    .scroll__down {
 
         display: none;
     }
 
-    .me > img{
+    .me>img {
 
         margin-top: 2.5rem;
     }
+    .home__image {
+        height: 400px !important;
+    }
+    .home__image>img{
+        height: 100%;
+    }
+
 }

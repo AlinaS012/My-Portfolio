@@ -39,7 +39,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 8rem 5rem 5rem 5rem;
 }
 
 .about__card{
@@ -54,9 +54,14 @@
 
 .about__card:hover{
 
-    background: transparent;
-    border-color: var(--color-primary);
-    cursor: default;
+    background: rgba(237, 34, 121, 0.5);/*transparent*/;
+    border-color:  var(--color-primary);
+    cursor: pointer;
+    margin-top: -15px;
+    color: white;
+}
+.about__card:hover h5,small{
+    color: white;
 }
 
 .about__icon{

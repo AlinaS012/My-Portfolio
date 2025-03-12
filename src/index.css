@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-*{
+* {
 
     margin: 0;
     padding: 0;
@@ -13,37 +13,40 @@
 
 /* defining some css variables */
 
-:root{
+:root {
 
-    --color-bg: #1f1f38;
-    --color-bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
+    --color-bg: rgb(21, 21, 21);
+    /*black;/*#1f1f38;*/
+    --color-bg-variant: black;
+    /* #2c2c6c; */
+    --color-primary: #ed2279;
+    /* #4db5ff;*/
     --color-primary-variant: rgba(77, 181, 255, 0.4);
     --color-white: #fff;
-    --color-light: rgba(255,  255, 255, 0.6);
+    --color-light: rgba(255, 255, 255, 0.6);
 
     --container-width-lg: 70%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
-    
+
     --transition: all 400ms ease;
 
 
 }
 
-html{
+html {
 
     scroll-behavior: smooth;
 }
 
 /* removing the scrollbar */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 
     display: none;
 }
 
-body{
+body {
 
     font-family: 'Poppins', sans-serif;
     background: var(--color-bg);
@@ -54,82 +57,93 @@ body{
 
 /* General Styles */
 
-.container{
+.container {
 
     width: var(--container-width-lg);
-    margin: 0 auto;  /*position in the middle horizontally */
+    margin: 0 auto;
+    /*position in the middle horizontally */
 }
 
-h1, h2, h3, h4, h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
 
     font-weight: 500;
 }
 
-h1{
+h1 {
 
     font-size: 2.5rem;
 }
 
-section{
+section {
 
-    margin-top: 8rem; /*Having some white space around different section*/
-    
+    margin-top: 8rem;
+    /*Having some white space around different section*/
+
 }
 
-section > h2, section > h5{
+section>h2,
+section>h5 {
 
     text-align: center;
     color: var(--color-light);
 }
 
-section > h2{
+section>h2 {
 
     color: var(--color-primary);
     margin-bottom: 3rem;
 }
 
-.text-light{
+.text-light {
 
     color: var(--color-light);
 }
 
-a{
+a {
 
     color: var(--color-primary);
     transition: var(--transition);
 }
 
-a:hover{
+a:hover {
 
     color: var(--color-white);
 }
 
-.btn{
+.btn {
 
-    width: max-content; /* fit exactly it's content */
+    width: max-content;
+    /* fit exactly it's content */
     display: inline-block;
-    color: var(--color-primary);
+    color: black
+        /*var(--color-primary)*/
+    ;
+    background: linear-gradient(145deg,  #ed2279, rgb(231, 201, 35));
     padding: 0.75rem 1.2rem;
     border-radius: 0.4rem;
     cursor: pointer;
-    border: 1px solid var(--color-primary);
+    border: none; /*1px solid var(--color-primary);*/
     transition: var(--transition);
 }
 
-.btn:hover{
+.btn:hover {
 
     background: var(--color-white);
     color: var(--color-bg);
     border-color: transparent;
 }
 
-.btn-primary{
+.btn-primary {
 
     background: var(--color-primary);
     color: var(--color-bg);
 }
 
-img{
+img {
 
     display: block;
     width: 100%;
@@ -140,30 +154,30 @@ img{
 
 @media screen and (max-width: 1024px) {
 
-    .container{
+    .container {
 
         width: var(--container-width-md);
     }
 
-    section{
+    section {
 
         margin-top: 6rem;
     }
-    
+
 }
 
 /* Media queries for small devices(Mobiles) */
 
 @media screen and (max-width: 600px) {
 
-    .container{
+    .container {
 
         width: var(--container-width-sm);
     }
 
-    section > h2{
+    section>h2 {
 
         margin-bottom: 2rem;
     }
-    
+
 }
